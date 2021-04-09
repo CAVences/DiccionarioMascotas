@@ -1,0 +1,36 @@
+<div class="container py-5">
+    <div class="card cards">
+        <div class="card-header text-white ">
+            <h3>Detalle de la mascota</h3>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="{{'https://cdn2.thecatapi.com/images/' + animal.reference_image_id + '.jpg'}}"
+                        class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <div class="card-body">
+                        <h5 class="card-title">Nombre: </h5>
+                        <p class="card-text">{{animal.name}}</p>
+                        <h5 class="card-title">Origen: </h5>
+                        <p class="card-text">{{animal.origin}}</p>
+                        <h5 class="card-title">Temperamento: </h5>
+                        <p class="card-text">{{animal.temperament}}</p>
+                        <h5 class="card-title">Origen: </h5>
+                        <p class="card-text">{{animal.origin}}</p>
+                        <h5 class="card-title">Wikipedia Url: </h5>
+                        <a class="card-text" href="{{animal.wikipedia_url}}">Enlace</a>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="card-body">
+                        <h5 class="card-title">Descripcion: </h5>
+                        <p class="card-text">{{animal.description}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

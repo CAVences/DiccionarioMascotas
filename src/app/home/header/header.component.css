@@ -1,0 +1,19 @@
+.navbar{
+	position: fixed;
+	top:0;
+	width:100%;
+    height: 60px;
+	z-index:9999;
+	background-color: #1577c7;
+	color: white;
+	font-size: 15px;
+}
+
+.navbar-brand {
+    color: white
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+}

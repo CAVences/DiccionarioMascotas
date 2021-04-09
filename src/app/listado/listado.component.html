@@ -1,0 +1,53 @@
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-3 py-3" *ngFor="let animal of listAnimals">
+          <div class="card" >
+            <img src="{{animal.image.url}}" class="img-card" >
+            <div class="card-body">
+                <h5 class="card-title">Nombre: </h5>
+              <p class="card-text">{{animal.name}}</p>
+              <h5 class="card-title">Origen: </h5>
+              <p class="card-text">{{animal.origin}}</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">
+                    <div class="row group-buttons">
+                        <button type="button" class="btn btn-outline-primary btn-sm" [routerLink]="['/detalle',animal.id]">Detalles</button>
+                        <button type="button" class="btn btn-outline-warning btn-sm" (click)="getAnimalById(animal.id)" data-bs-toggle="modal" data-bs-target="#exampleModal">Info</button>
+                    </div>
+                </small>
+              </div>
+              <div  class="modal fade py-5" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content" *ngIf="mostrar">
+                    <div class="modal-header col-md-12">
+                      <h5 class="modal-title" id="exampleModalLabel">{{animalModal.name}}</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <img src="{{animalModal.image.url}}"
+                        class="img-fluid">
+                        </div>
+                        <div class="col-md-6">
+                          <h5 class="card-title">Origen: </h5>
+                        <p class="card-text">{{animalModal.origin}}</p>
+                        <h5 class="card-title">Temperamento: </h5>
+                        <p class="card-text">{{animalModal.temperament}}</p>
+                        <h5 class="card-title">Origen: </h5>
+                        <p class="card-text">{{animalModal.origin}}</p>
+                        <h5 class="card-title">Wikipedia Url: </h5>
+                        <a class="card-text" href="{{animalModal.wikipedia_url}}">Enlace</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+        
+      </div>
+
+</div>
